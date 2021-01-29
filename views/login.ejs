@@ -1,0 +1,66 @@
+<%- include('partials/header') %>
+
+<div class="container mt-5">
+  <nav class="navbar navbar-expand-lg navbar-dark  ">
+    <a class="navbar-brand " href="" style="color: black;">Login</a>
+   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item ">
+          <a class="nav-link " href="/">Home</a>
+        </li>
+        <li class="nav-item ">
+          <a class="nav-link " href="#foot">Contact</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/about">About us</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <div class="card w-50">
+        <div class="card-body">
+
+          <!-- Makes POST request to /login route -->
+          <form action="/login" method="POST">
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" class="form-control" name="username">
+            </div>
+            <div class="form-group">
+              <label for="password">Password</label>
+              <input type="password" class="form-control" name="password">
+            </div>
+            <br>
+            <div class="form-group text-center">
+              <button type="submit" class="btn btn-dark  ">Login</button>
+            </div>
+          </form>
+          <br>
+          <div class="form-group w-50">
+            <a class="btn btn-block btn-social btn-google" href="/auth/google" role="button"><i class="fab fa-google"></i>Sign In with Google</a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+   
+
+  </div>
+</div>
+<footer id="foot" class="footer">
+  <br>
+  <br>
+  <br>
+  <a href="mailto:chaitrabhandalkar133@gmail.com" target="_blank"><i class="fa fa-envelope-o footer-icon" aria-hidden="true"></i></a>
+  <a href="https://github.com/ChaitraBhandalkar" target="_blank" ><i class="fa fa-github footer-icon" aria-hidden="true"></i></a>
+  <a href="https://www.instagram.com/chaitra_bhandalkar/" target="_blank"><i class="fa fa-instagram footer-icon" aria-hidden="true"></i></a>
+  <a href="https://wa.me/+919880972911"  ><i class="fa fa-whatsapp footer-icon" aria-hidden="true"></i></a>
+  
+    <p>© Copyright N Chaitra Bhandalkar</p>
+
+  </footer>
+<%- include('partials/footer') %>

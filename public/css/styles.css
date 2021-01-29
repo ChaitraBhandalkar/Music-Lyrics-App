@@ -1,0 +1,101 @@
+#footer{
+    text-align: center;
+    padding:50px;
+    background-color: #E8ECEF;    
+  }
+
+.footer{
+    text-align: center;
+    padding:50px;
+      
+  }
+.footer-icon{
+    padding: 10px;
+    padding-bottom: 20px;
+    color: #000;
+    font-size: 25px;  
+  }
+
+body {
+    background-color: #1DB954;  
+  }
+
+.centered {
+      padding-top: 200px;
+      text-align: center;
+  }
+
+#title{
+    color: black;
+  }
+  
+.container-fluid{
+    padding: 3% 6% 7%;
+  }
+  
+.mainheading{
+    font-family: "Montserrat";
+    font-weight: 900;
+    font-size:3rem;
+    line-height: 1.5;
+  }
+  
+h2{
+    color: black;
+    font-family: "Montserrat";
+    font-weight: bold;
+    font-size: 3rem;
+    line-height: 1.5;
+  }
+
+p{
+    color: black; 
+  }
+  .searchform{
+    width: 350px;
+  }
+  /* Nav bar*/
+  .navbar{
+    padding-bottom: 4.5rem;
+  }
+  
+  .navbar-brand{
+    font-family: "Ubuntu";
+    font-size: 2.5rem;
+    font-weight: bold;
+  }
+  h1{
+    font-family: "Ubuntu";
+    font-size: 2.5rem;
+    font-weight: bold;
+    
+  }
+  .nav-item{
+    padding: 0 18px;
+  }
+  .nav-link{
+  color: black ;
+    font-size: 1.2rem;
+   /* font-family: "Montserrat-light";*/
+    
+  }
+
+  .btn-google{
+    margin-left:125px;
+  }
+  /* login/register buttons*/
+  .login-button{
+    margin: 5% 3% 5% 0;
+  }
+  
+
+  #lyrics{
+    display: block;font-family: monospace;white-space: pre;margin: 1em 0;
+    font-size:16px;line-height:25px;border: solid 2px black;display: none;
+    }
+  
+ .card{
+   margin: auto;
+ }
+ 
+  

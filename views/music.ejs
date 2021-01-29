@@ -1,0 +1,107 @@
+<%- include('partials/header') %>
+
+<div class="container mt-5 text-center">
+  
+     
+   
+  <nav class="navbar navbar-expand-lg navbar-dark  ">
+    <a class="navbar-brand " href="" style="color: black;">Lyrics App</a>
+   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link " href="/" >Home</a>
+        </li>
+        <li class="nav-item ">
+          <a class="nav-link " href="#foot">Contact</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/about">About us</a>
+        </li>
+        <li class="nav-item "></li>
+        <form  action="javascript:Search()" class="form-inline  ">
+          <div  class="  form-group mx-sm-3 mb-2 text-center">
+            <label for="query" class="sr-only">Password</label>
+            <input placeholder="Search Music .." autocomplete="off" type="text" class="form-control" id="query" >
+          </div>
+          <button type="submit" class="btn btn-dark mb-2">Search</button>
+        </form>
+      </li>
+        
+        
+      </ul>
+    </div>
+  </nav>
+  
+ 
+   
+</div>
+
+      
+    <div class="jumbotron container text-center" style="margin-top: 50px;">
+      <div class="col-md-12">
+        <h1 style="font-weight: lighter;font-size: 50px;font-family:cursive;">Song Lyrics Scraper</h1>
+        <br>
+        
+      </div>
+      <br><br><br>
+
+      <div class="col-md-12 ">
+        <pre id="lyrics"></pre>
+      </div>
+    </div>
+    
+    <script type="text/javascript">
+      function Search(){  
+      var query=$('#query').val();
+      $('#lyrics').css('display','none')
+      console.log(query);
+        $.get('/getmusic/'+query,function(data,status){
+          // alert('Data Received');
+          console.log(data);
+          if(data.length<3)
+          $("#lyrics").text('Lyrics Not Found');
+          else
+          $("#lyrics").text(data);
+          $('#lyrics').css('display','block')
+        });
+      }
+      document.getElementById('query').onpress = function(e){
+          if (!e) e = window.event;
+          var keyCode = e.keyCode || e.which;
+          if (keyCode == '13'){
+            Search();
+            return false;
+          }
+      }
+      </script>
+      <div class="form-group text-center">
+        <a  class="btn btn-dark btn-sm mb-2" href="/logout" >logout</a>
+      </div>
+
+<footer id="foot" class="footer">
+  
+  <br>
+  <br>
+  <br>
+  <a href="mailto:chaitrabhandalkar133@gmail.com" target="_blank"><i class="fa fa-envelope-o footer-icon" aria-hidden="true"></i></a>
+  <a href="https://github.com/ChaitraBhandalkar" target="_blank" ><i class="fa fa-github footer-icon" aria-hidden="true"></i></a>
+  <a href="https://www.instagram.com/chaitra_bhandalkar/" target="_blank"><i class="fa fa-instagram footer-icon" aria-hidden="true"></i></a>
+  <a href="https://wa.me/+919880972911"  ><i class="fa fa-whatsapp footer-icon" aria-hidden="true"></i></a>
+  
+    <p>© Copyright N Chaitra Bhandalkar</p>
+
+  </footer>
+  
+  
+
+<%- include('partials/footer') %>
+
+
+
+
+
+ 
